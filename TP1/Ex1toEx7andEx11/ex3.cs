@@ -6,19 +6,19 @@ namespace CalculoAreaRetangulo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("=== Cálculo de Área de um Retângulo ===");
+            Console.WriteLine("=== CÃ¡lculo de Ãrea de um RetÃ¢ngulo ===");
 
-            Console.Write("Informe a base do retângulo: ");
+            Console.Write("Informe a base do retÃ¢ngulo: ");
             if (!double.TryParse(Console.ReadLine(), out double baseRetangulo))
             {
-                Console.WriteLine("Valor inválido para a base!");
+                Console.WriteLine("Valor invÃ¡lido para a base!");
                 return;
             }
 
-            Console.Write("Informe a altura do retângulo: ");
+            Console.Write("Informe a altura do retÃ¢ngulo: ");
             if (!double.TryParse(Console.ReadLine(), out double alturaRetangulo))
             {
-                Console.WriteLine("Valor inválido para a altura!");
+                Console.WriteLine("Valor invÃ¡lido para a altura!");
                 return;
             }
 
@@ -26,7 +26,7 @@ namespace CalculoAreaRetangulo
 
             double area = calcularArea(baseRetangulo, alturaRetangulo);
 
-            Console.WriteLine($"A área do retângulo é: {area:F2}");
+            Console.WriteLine($"A Ã¡rea do retÃ¢ngulo Ã©: {area:F2}");
 
             Console.WriteLine("Pressione qualquer tecla para sair...");
             Console.ReadKey();
