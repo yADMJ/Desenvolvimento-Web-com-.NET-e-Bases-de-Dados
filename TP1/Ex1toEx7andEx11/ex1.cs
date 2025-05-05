@@ -14,7 +14,7 @@ namespace DescontoDelegate
         static void Main(string[] args)
         {
             Console.WriteLine("=== Sistema de Descontos ===");
-            Console.Write("Informe o preÁo original do produto: ");
+            Console.Write("Informe o pre√ßo original do produto: ");
 
             if (decimal.TryParse(Console.ReadLine(), out decimal precoOriginal))
             {
@@ -22,12 +22,12 @@ namespace DescontoDelegate
 
                 decimal precoComDesconto = calcularDesconto(precoOriginal);
 
-                Console.WriteLine($"PreÁo original: R$ {precoOriginal:F2}");
-                Console.WriteLine($"PreÁo com 10% de desconto: R$ {precoComDesconto:F2}");
+                Console.WriteLine($"Pre√ßo original: R$ {precoOriginal:F2}");
+                Console.WriteLine($"Pre√ßo com 10% de desconto: R$ {precoComDesconto:F2}");
             }
             else
             {
-                Console.WriteLine("Valor inv·lido. Digite um n˙mero v·lido.");
+                Console.WriteLine("Valor inv√°lido. Digite um n√∫mero v√°lido.");
             }
 
             Console.WriteLine("Pressione qualquer tecla para sair...");
