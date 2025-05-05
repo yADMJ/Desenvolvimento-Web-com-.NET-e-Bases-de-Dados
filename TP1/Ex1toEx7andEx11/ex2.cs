@@ -6,12 +6,12 @@ namespace MensagensMultilingue
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("=== Sistema de Boas-Vindas Multilíngue ===");
+            Console.WriteLine("=== Sistema de Boas-Vindas MultilÃ­ngue ===");
             Console.WriteLine("Escolha um idioma:");
-            Console.WriteLine("1 - Português");
-            Console.WriteLine("2 - Inglês");
+            Console.WriteLine("1 - PortuguÃªs");
+            Console.WriteLine("2 - InglÃªs");
             Console.WriteLine("3 - Espanhol");
-            Console.Write("Digite o número correspondente ao idioma: ");
+            Console.Write("Digite o nÃºmero correspondente ao idioma: ");
 
             string escolha = Console.ReadLine();
 
@@ -29,12 +29,12 @@ namespace MensagensMultilingue
                     exibirMensagem = MensagemEspanhol;
                     break;
                 default:
-                    Console.WriteLine("Opção inválida! Será exibida a mensagem padrão em Português.");
+                    Console.WriteLine("OpÃ§Ã£o invÃ¡lida! SerÃ¡ exibida a mensagem padrÃ£o em PortuguÃªs.");
                     exibirMensagem = MensagemPortugues;
                     break;
             }
 
-            exibirMensagem("usuário");
+            exibirMensagem("usuÃ¡rio");
 
             Console.WriteLine("Pressione qualquer tecla para sair...");
             Console.ReadKey();
@@ -42,7 +42,7 @@ namespace MensagensMultilingue
 
         static void MensagemPortugues(string nome)
         {
-            Console.WriteLine($"Bem-vindo, {nome}! Esperamos que você aproveite nossa plataforma.");
+            Console.WriteLine($"Bem-vindo, {nome}! Esperamos que vocÃª aproveite nossa plataforma.");
         }
 
         static void MensagemIngles(string name)
@@ -52,7 +52,7 @@ namespace MensagensMultilingue
 
         static void MensagemEspanhol(string nombre)
         {
-            Console.WriteLine($"¡Bienvenido, {nombre}! Esperamos que disfrutes de nuestra plataforma.");
+            Console.WriteLine($"Â¡Bienvenido, {nombre}! Esperamos que disfrutes de nuestra plataforma.");
         }
     }
 }
