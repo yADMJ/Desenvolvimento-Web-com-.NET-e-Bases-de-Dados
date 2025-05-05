@@ -11,7 +11,7 @@ namespace StringManipulation
             manipularNome += ConverterMaiusculas;
             manipularNome += RemoverEspacos;
 
-            string nome = "Jo„o";
+            string nome = "Jo√£o";
             string sobrenome = " Silva";
 
             string resultado = manipularNome(nome, sobrenome);
