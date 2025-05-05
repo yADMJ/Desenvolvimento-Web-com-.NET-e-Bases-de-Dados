@@ -31,7 +31,7 @@ namespace SistemaDeLogs
 
             Action<string> logDelegate = null;
 
-            // (para testar com métodos, descomente abaixo)
+            // (para testar com mÃ©todos, descomente abaixo)
             // logDelegate += logger.LogToConsole;
             // logDelegate += logger.LogToFile;
             // logDelegate += logger.LogToDatabase;
@@ -42,7 +42,7 @@ namespace SistemaDeLogs
 
             logDelegate?.Invoke(mensagem);
 
-            Console.WriteLine("? Log processado. (Se houver métodos associados, eles foram executados)");
+            Console.WriteLine("? Log processado. (Se houver mÃ©todos associados, eles foram executados)");
             Console.WriteLine("Pressione qualquer tecla para sair...");
             Console.ReadKey();
         }
