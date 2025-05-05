@@ -1,0 +1,24 @@
+﻿@page
+@model LojaRazor.Pages.AddEventModel
+
+
+<h2>Cadastrar Evento</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label for="Title">Título</label>
+        <input type="text" id="Title" name="Title" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label for="Date">Data</label>
+        <input type="date" id="Date" name="Date" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label for="Location">Local</label>
+        <input type="text" id="Location" name="Location" class="form-control" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Cadastrar Evento</button>
+</form>

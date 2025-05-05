@@ -1,0 +1,29 @@
+﻿@page
+@model LojaRazor.Pages.IndexModel
+@{
+    ViewData["Title"] = "Página Inicial";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h2>Lista de Produtos</h2>
+
+<table border="1" cellpadding="5">
+    <tr>
+        <th>Nome</th>
+        <th>Preço</th>
+    </tr>
+    @foreach (var produto in Model.Produtos)
+    {
+        <tr>
+            <td>@produto.Nome</td>
+            <td>R$ @produto.Preco.ToString("F2")</td>
+        </tr>
+    }
+</table>
+
+<p>
+    <a asp-page="/Sobre">Ir para a página Sobre</a>
+    <a asp-page="/AddProduct">Ir para a página do Ex10</a>
+    <a asp-page="/add-event">Ir para a página do Ex12</a>
+</p>
