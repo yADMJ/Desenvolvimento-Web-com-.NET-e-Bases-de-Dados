@@ -10,7 +10,7 @@ namespace MonitoramentoTemperatura
 
         public void ReadTemperature(double temperature)
         {
-            Console.WriteLine($"Leitura: {temperature}ºC");
+            Console.WriteLine($"Leitura: {temperature}ÂºC");
 
             if (temperature > 100)
             {
@@ -44,7 +44,7 @@ namespace MonitoramentoTemperatura
                 }
                 else
                 {
-                    Console.WriteLine("Valor inválido. Tente novamente.");
+                    Console.WriteLine("Valor invÃ¡lido. Tente novamente.");
                 }
             }
 
@@ -54,7 +54,7 @@ namespace MonitoramentoTemperatura
 
         private static void Sensor_TemperatureExceeded(double temperature)
         {
-            Console.WriteLine($"?? ALERTA: Temperatura excedida! Valor registrado: {temperature}ºC");
+            Console.WriteLine($"?? ALERTA: Temperatura excedida! Valor registrado: {temperature}ÂºC");
         }
     }
 }
