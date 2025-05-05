@@ -43,7 +43,7 @@ namespace SimuladorDownload
 
         private static void Manager_DownloadCompleted(object sender, EventArgs e)
         {
-            Console.WriteLine("? Download concluído com sucesso!");
+            Console.WriteLine("? Download concluÃ­do com sucesso!");
         }
     }
 }
