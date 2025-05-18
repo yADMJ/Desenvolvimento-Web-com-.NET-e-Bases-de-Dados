@@ -1,0 +1,38 @@
+﻿@page
+@model CreateMultipleCountriesModel
+@{
+    ViewData["Title"] = "Cadastrar Múltiplos Países";
+}
+
+<h2>Cadastrar Múltiplos Países</h2>
+
+<form method="post">
+    @for (int i = 0; i < Model.Countries.Count; i++)
+    {
+        <div>
+            <label asp-for="Countries[i].CountryName"></label>
+            <input asp-for="Countries[i].CountryName" />
+            <span asp-validation-for="Countries[i].CountryName" class="text-danger"></span>
+
+            <label asp-for="Countries[i].CountryCode"></label>
+            <input asp-for="Countries[i].CountryCode" />
+            <span asp-validation-for="Countries[i].CountryCode" class="text-danger"></span>
+        </div>
+    }
+    <button type="submit">Salvar</button>
+</form>
+
+@if (Model.SubmittedCountries != null && Model.SubmittedCountries.Any())
+{
+    <h3>Países Cadastrados:</h3>
+    <ul>
+        @foreach (var country in Model.SubmittedCountries)
+        {
+            <li>@country.CountryName (@country.CountryCode)</li>
+        }
+    </ul>
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

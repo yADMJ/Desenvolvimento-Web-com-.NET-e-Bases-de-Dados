@@ -1,0 +1,23 @@
+﻿@page
+@model CreateCityModel
+@{
+    ViewData["Title"] = "Cadastrar Cidade";
+}
+
+<h2>Cadastrar Cidade</h2>
+
+<form method="post">
+    <label asp-for="Input.CityName"></label>
+    <input asp-for="Input.CityName" />
+    <span asp-validation-for="Input.CityName" class="text-danger"></span>
+    <button type="submit">Salvar</button>
+</form>
+
+@if (!string.IsNullOrEmpty(Model.SubmittedCity))
+{
+    <p>Nome da cidade: @Model.SubmittedCity</p>
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

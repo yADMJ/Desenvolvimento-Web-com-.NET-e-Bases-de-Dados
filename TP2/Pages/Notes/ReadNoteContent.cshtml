@@ -1,0 +1,9 @@
+﻿@page "{fileName}"
+@model ReadNoteContentModel
+@{
+    ViewData["Title"] = "Conteúdo da Nota";
+}
+
+<h2>Conteúdo da Nota: @Model.FileName</h2>
+
+<pre>@Model.NoteContent</pre>

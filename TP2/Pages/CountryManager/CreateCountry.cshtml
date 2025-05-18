@@ -1,0 +1,28 @@
+﻿@page
+@model CreateCountryModel
+@{
+    ViewData["Title"] = "Cadastrar País";
+}
+
+<h2>Cadastrar País</h2>
+
+<form method="post">
+    <label asp-for="Input.CountryName"></label>
+    <input asp-for="Input.CountryName" />
+    <span asp-validation-for="Input.CountryName" class="text-danger"></span>
+
+    <label asp-for="Input.CountryCode"></label>
+    <input asp-for="Input.CountryCode" />
+    <span asp-validation-for="Input.CountryCode" class="text-danger"></span>
+
+    <button type="submit">Salvar</button>
+</form>
+
+@if (Model.SubmittedCountry != null)
+{
+    <p>País cadastrado: @Model.SubmittedCountry.CountryName (@Model.SubmittedCountry.CountryCode)</p>
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

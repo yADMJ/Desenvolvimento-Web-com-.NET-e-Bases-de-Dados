@@ -1,0 +1,16 @@
+﻿@page
+@model ReadNotesModel
+@{
+    ViewData["Title"] = "Ler Notas";
+}
+
+<h2>Notas Salvas</h2>
+
+<ul>
+    @foreach (var file in Model.NoteFiles)
+    {
+        <li>
+            <a asp-page="ReadNoteContent" asp-route-fileName="@file">@file</a>
+        </li>
+    }
+</ul>
