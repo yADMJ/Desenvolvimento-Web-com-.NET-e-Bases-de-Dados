@@ -1,0 +1,24 @@
+﻿@page
+@model CityDetailsModel
+@{
+    ViewData["Title"] = "Detalhes da Cidade";
+}
+
+<h1>Detalhes da Cidade: @Model.City?.Name</h1>
+
+@if (Model.City == null)
+{
+    <p>Não foi possível encontrar a cidade.</p>
+}
+else
+{
+    <h3>País: @Model.City.Country?.CountryName</h3>
+
+    <h4>Propriedades Turísticas</h4>
+    <ul>
+        @foreach (var prop in Model.City.Properties)
+        {
+            <li>@prop.Name - @prop.PricePerNight.ToString("C")</li>
+        }
+    </ul>
+}

@@ -1,0 +1,30 @@
+﻿@page "{id:int}"
+@model CityBreaks.Web.Pages.EditPropertyModel
+
+<h2>Editar Propriedade</h2>
+
+<form method="post">
+    <div>
+        <label asp-for="Property.Name"></label>
+        <input asp-for="Property.Name" />
+        <span asp-validation-for="Property.Name"></span>
+    </div>
+
+    <div>
+        <label asp-for="Property.PricePerNight"></label>
+        <input asp-for="Property.PricePerNight" />
+        <span asp-validation-for="Property.PricePerNight"></span>
+    </div>
+
+    <div>
+        <label asp-for="Property.CityId"></label>
+        <select asp-for="Property.CityId" asp-items="Model.CityOptions"></select>
+        <span asp-validation-for="Property.CityId"></span>
+    </div>
+
+    <button type="submit">Salvar</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

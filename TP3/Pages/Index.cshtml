@@ -1,0 +1,21 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h2>Cities and Properties</h2>
+
+
+
+@foreach (var city in Model.Cities)
+{
+    <h3>@city.Name (@city.Country.CountryName)</h3>
+    <ul>
+        @foreach (var property in city.Properties)
+        {
+            <li>@property.Name - $@property.PricePerNight</li>
+            <a asp-page="/EditProperty" asp-route-id="@property.Id">Editar</a>
+        }
+    </ul>
+}
